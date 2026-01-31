@@ -8,130 +8,126 @@
 body {
   background: #0b0f14;
   color: #e5e7eb;
-  height: 100%;
-  margin:0;
+  margin: 0;
 }
+
+/* ================= LAYOUT ================= */
 
 .app {
   display: flex;
-  grid-template-columns: 45% 55%;
   height: 100vh;
 }
 
-/* LEFT IMAGE */
 .image-panel {
   background: black;
-  flex:1;
-  padding:20px;
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-}
-
-.image-panel img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* RIGHT CONTENT */
-.content-panel {
-  padding: 30px;
-  overflow-y: auto;
-  flex:1;
-  padding:20px;
-  display:flex;
-  align-items: stretch;
-}
-
-/* CARDS */
-.card {
-  background: #111827;
-  border-radius: 16px;
-  padding: 24px;
-  margin-bottom: 60px;
-  width:100%;
-  height:100%;
-}
-
-.card h2 {
-  margin-bottom: 16px;
-}
-
-.card ul li {
-  margin-bottom: 12px;
-  line-height: 1.6;
-}
-
-/* TEXT HIGHLIGHTS */
-.danger {
-  background: #7f1d1d;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
-.warning {
-  background: #78350f;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
-.highlight {
-  background: #1e3a8a;
-  padding: 2px 6px;
-  border-radius: 6px;
-}
-
-
-.upload-box {
-  border: 3px dashed #666;
-  padding: 40px;
+  flex: 1;
+  padding: 20px;
   display: flex;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 16px;
-  color: white;
-  width:80%;
-  height:320px;
-  align-items:center;
-justify-content: center;
-margin-bottom: 32px;  
-
+  flex-direction: column;
+  align-items: center;
+   justify-content: center;
 }
 
+.content-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* ================= TOP BANNER ================= */
+.top-banner {
+  width: 100%;
+  height: 90px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+
+  display: flex;
+  align-items: stretch;
+  padding: 0;     
+           /* IMPORTANT */
+}
+
+
+
+
+
+.banner-left {
+  display: flex;
+  align-items: stretch;
+  margin-left: 0;
+  padding-left: 8px; 
+}
+
+
+.banner-text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  margin:auto 0;
+  margin-top:20px;
+}
+
+
+.logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+
+
+.banner-text h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.banner-text p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+
+
+
+/* ================= UPLOAD BOX ================= */
+.upload-box {
+  width: 50vw;          /* half the page */
+  height: 55vh;
+  border: 3px dashed #777;
+  border-radius: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  margin-bottom: 30px;
+  position: relative;
+}
 .upload-box input {
   display: none;
 }
-
-.upload-box:hover {
-  border-color: #00ffcc;
-}
-.upload-wrapper {
-  width: 80%;
-  height:90%;
+.upload-text {
+  color: #aaa;
+  font-size: 18px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 100px; /* space between box and button */
-  border-radius: 16px;
-  
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
+  pointer-events: none;
 }
 
-
+/* button */
 .scan-btn {
   background: linear-gradient(135deg, #2b2b70, #0d0d0e);
   border: none;
-  padding: 14px 36px;
+  padding: 14px 40px;
   border-radius: 999px;
   color: white;
   font-size: 16px;
   cursor: pointer;
-  border: none;
 }
 
 .scan-btn:hover {
